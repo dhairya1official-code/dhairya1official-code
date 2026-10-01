@@ -1,0 +1,108 @@
+/* ==UserStyle==
+@name         GitHub Pixel Arcade
+@namespace    dhairya1official-code.github.pixel
+@version      1.0.0
+@description  Retro pixel-arcade dark theme for github.com (purple / pink / cyan). Best-effort: overrides Primer CSS variables.
+@author       dhairya1official-code
+@preprocessor default
+==/UserStyle== */
+
+@-moz-document domain("github.com") {
+
+  /* ---------- Palette ---------- */
+  html[data-color-mode][data-dark-theme],
+  html[data-color-mode] body,
+  :root {
+    --px-bg:      #140a2b;
+    --px-bg-2:    #1a1033;
+    --px-bg-3:    #221245;
+    --px-border:  #3d2a6b;
+    --px-text:    #e8e0ff;
+    --px-muted:   #a79bd0;
+    --px-pink:    #ff4d9d;
+    --px-cyan:    #00e5ff;
+    --px-yellow:  #ffd23f;
+    --px-green:   #7cfc7c;
+  }
+
+  /* ---------- Primer variable overrides (dark mode) ---------- */
+  html[data-color-mode="dark"][data-dark-theme],
+  html[data-color-mode="auto"][data-dark-theme] {
+    --bgColor-default:  var(--px-bg) !important;
+    --bgColor-muted:    var(--px-bg-2) !important;
+    --bgColor-inset:    var(--px-bg) !important;
+    --bgColor-neutral-muted: var(--px-bg-3) !important;
+    --bgColor-accent-emphasis: var(--px-pink) !important;
+    --bgColor-success-emphasis: #2f8f2f !important;
+    --borderColor-default: var(--px-border) !important;
+    --borderColor-muted:   var(--px-border) !important;
+    --borderColor-accent-emphasis: var(--px-cyan) !important;
+    --fgColor-default: var(--px-text) !important;
+    --fgColor-muted:   var(--px-muted) !important;
+    --fgColor-accent:  var(--px-cyan) !important;
+    --fgColor-link:    var(--px-cyan) !important;
+    --fgColor-success: var(--px-green) !important;
+    --header-bgColor:  var(--px-bg-2) !important;
+    --button-primary-bgColor-rest: var(--px-pink) !important;
+    --button-primary-bgColor-hover: #ff72b3 !important;
+    --button-primary-fgColor-rest: #140a2b !important;
+    /* legacy names still used in places */
+    --color-canvas-default: var(--px-bg) !important;
+    --color-canvas-subtle:  var(--px-bg-2) !important;
+    --color-border-default: var(--px-border) !important;
+    --color-fg-default:     var(--px-text) !important;
+    --color-accent-fg:      var(--px-cyan) !important;
+  }
+
+  body { background: var(--px-bg) !important; }
+
+  /* ---------- Pixel shapes: no rounded corners, hard shadows ---------- */
+  .Box, .btn, .form-control, .Label, .branch-name, .markdown-body table,
+  .markdown-body pre, .search-input, .subnav-search-input, .Popover-message,
+  .dropdown-menu, .SelectMenu-modal, .color-bg-default.rounded,
+  [class*="prc-Button"], [class*="prc-Dialog"], [class*="Card"] {
+    border-radius: 0 !important;
+  }
+  .Box {
+    border: 2px solid var(--px-border) !important;
+    box-shadow: 4px 4px 0 #0b0518 !important;
+  }
+  .btn-primary, [data-variant="primary"] {
+    border: 2px solid #0b0518 !important;
+    box-shadow: 3px 3px 0 #0b0518 !important;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+  .btn:hover, [class*="prc-Button"]:hover { transform: translate(1px,1px); }
+  img.avatar, .avatar, .avatar-user { border-radius: 0 !important; image-rendering: pixelated; }
+
+  /* ---------- Typography ---------- */
+  h1, h2, h3, .Header-link, .UnderlineNav-item, .pagehead h1 {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Courier New", monospace !important;
+    letter-spacing: .3px;
+  }
+  .Header-link, .AppHeader a { color: var(--px-text) !important; }
+  a:hover { text-decoration: none !important; color: var(--px-pink) !important; }
+
+  /* ---------- Header accent line ---------- */
+  .Header, header.AppHeader, .AppHeader-globalBar {
+    background: var(--px-bg-2) !important;
+    border-bottom: 3px solid var(--px-pink) !important;
+  }
+
+  /* ---------- Contribution graph: arcade palette ---------- */
+  .ContributionCalendar-day { border-radius: 0 !important; outline: none !important; }
+  .ContributionCalendar-day[data-level="0"] { background-color: #221245 !important; }
+  .ContributionCalendar-day[data-level="1"] { background-color: #5a3d8f !important; }
+  .ContributionCalendar-day[data-level="2"] { background-color: #8f5fd6 !important; }
+  .ContributionCalendar-day[data-level="3"] { background-color: #c58bff !important; }
+  .ContributionCalendar-day[data-level="4"] { background-color: #ff4d9d !important; }
+
+  /* ---------- Scrollbars ---------- */
+  ::-webkit-scrollbar { width: 12px; height: 12px; }
+  ::-webkit-scrollbar-track { background: var(--px-bg-2); }
+  ::-webkit-scrollbar-thumb { background: var(--px-border); border: 2px solid var(--px-bg-2); }
+  ::-webkit-scrollbar-thumb:hover { background: var(--px-pink); }
+
+  ::selection { background: var(--px-pink); color: #140a2b; }
+}

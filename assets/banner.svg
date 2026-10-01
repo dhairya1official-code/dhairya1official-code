@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Dhairya Khadayata - Player One">
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#221245" stroke-width="2"/>
+    </pattern>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#140a2b"/>
+      <stop offset="1" stop-color="#2a1050"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#sky)"/>
+  <rect width="1200" height="300" fill="url(#grid)" opacity=".6"/>
+  <!-- pixel stars -->
+  <g fill="#e8e0ff">
+    <rect x="80" y="40" width="4" height="4"><animate attributeName="opacity" values="1;.2;1" dur="2.1s" repeatCount="indefinite"/></rect>
+    <rect x="300" y="70" width="4" height="4"><animate attributeName="opacity" values=".2;1;.2" dur="1.7s" repeatCount="indefinite"/></rect>
+    <rect x="980" y="50" width="4" height="4"><animate attributeName="opacity" values="1;.3;1" dur="2.6s" repeatCount="indefinite"/></rect>
+    <rect x="1120" y="110" width="4" height="4"><animate attributeName="opacity" values=".3;1;.3" dur="1.9s" repeatCount="indefinite"/></rect>
+    <rect x="160" y="230" width="4" height="4"><animate attributeName="opacity" values="1;.2;1" dur="2.4s" repeatCount="indefinite"/></rect>
+    <rect x="860" y="240" width="4" height="4"><animate attributeName="opacity" values=".2;1;.2" dur="2.2s" repeatCount="indefinite"/></rect>
+  </g>
+  <!-- frame -->
+  <rect x="12" y="12" width="1176" height="276" fill="none" stroke="#ff4d9d" stroke-width="4"/>
+  <rect x="22" y="22" width="1156" height="256" fill="none" stroke="#3d2a6b" stroke-width="2"/>
+  <!-- hud -->
+  <g font-family="'Courier New', Consolas, monospace" font-weight="700">
+    <text x="48" y="60" font-size="18" fill="#ffd23f">1UP</text>
+    <text x="1152" y="60" font-size="18" fill="#ffd23f" text-anchor="end">HI-SCORE 999999</text>
+    <text x="604" y="158" font-size="64" fill="#0b0518" text-anchor="middle" letter-spacing="6">DHAIRYA KHADAYATA</text>
+    <text x="600" y="154" font-size="64" fill="#00e5ff" text-anchor="middle" letter-spacing="6">DHAIRYA KHADAYATA</text>
+    <text x="600" y="200" font-size="20" fill="#c58bff" text-anchor="middle" letter-spacing="3">SECURITY · AI/ML · C++ · PYTHON · GAME DEV</text>
+    <text x="600" y="250" font-size="22" fill="#ff4d9d" text-anchor="middle" letter-spacing="4">▶ PRESS START
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur="1.2s" repeatCount="indefinite"/>
+    </text>
+  </g>
+</svg>
